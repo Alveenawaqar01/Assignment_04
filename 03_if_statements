@@ -1,0 +1,196 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNgDj91SdHJNRLqpyiIw279",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Alveenawaqar01/Assignment_04/blob/main/03_if_statements\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Qc8canSIMJU0"
+      },
+      "outputs": [],
+      "source": [
+        "01"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_even_numbers():\n",
+        "    for i in range(20):\n",
+        "        print(i * 2, end=\" \")\n",
+        "\n",
+        "# Run the function\n",
+        "print_even_numbers()\n"
+      ],
+      "metadata": {
+        "id": "5YudtHbaMTux"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "02"
+      ],
+      "metadata": {
+        "id": "jFanqOkoMU5j"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_voting_age(age):\n",
+        "    if age >= 16:\n",
+        "        print(\"You can vote in Peturksbouipo where the voting age is 16.\")\n",
+        "    else:\n",
+        "        print(\"You cannot vote in Peturksbouipo where the voting age is 16.\")\n",
+        "\n",
+        "    if age >= 25:\n",
+        "        print(\"You can vote in Stanlau where the voting age is 25.\")\n",
+        "    else:\n",
+        "        print(\"You cannot vote in Stanlau where the voting age is 25.\")\n",
+        "\n",
+        "    if age >= 48:\n",
+        "        print(\"You can vote in Mayengua where the voting age is 48.\")\n",
+        "    else:\n",
+        "        print(\"You cannot vote in Mayengua where the voting age is 48.\")\n",
+        "\n",
+        "age = int(input(\"How old are you? \"))\n",
+        "check_voting_age(age)\n"
+      ],
+      "metadata": {
+        "id": "bOHzC_WoMV9N"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "03"
+      ],
+      "metadata": {
+        "id": "XV2Ho44PMeIR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_leap_year(year):\n",
+        "    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
+        "        print(\"That's a leap year!\")\n",
+        "    else:\n",
+        "        print(\"That's not a leap year.\")\n",
+        "\n",
+        "year = int(input(\"Enter a year: \"))\n",
+        "check_leap_year(year)\n"
+      ],
+      "metadata": {
+        "id": "tkiMIw2ZMff9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "04"
+      ],
+      "metadata": {
+        "id": "6xks3JRbMklk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_tall_enough(height):\n",
+        "    if height >= 50:\n",
+        "        print(\"You're tall enough to ride!\")\n",
+        "    else:\n",
+        "        print(\"You're not tall enough to ride, but maybe next year!\")\n",
+        "\n",
+        "def main():\n",
+        "    try:\n",
+        "        height = int(input(\"How tall are you? \"))\n",
+        "        check_tall_enough(height)\n",
+        "    except ValueError:\n",
+        "        print(\"Please enter a valid number for height.\")\n",
+        "\n",
+        "def tall_enough_extension():\n",
+        "    while True:\n",
+        "        user_input = input(\"How tall are you? \")\n",
+        "\n",
+        "        if user_input == \"\":\n",
+        "            break  # Exit if user input is empty\n",
+        "\n",
+        "        try:\n",
+        "            height = int(user_input)\n",
+        "            check_tall_enough(height)\n",
+        "        except ValueError:\n",
+        "            print(\"Please enter a valid number for height.\")\n",
+        "\n",
+        "# Uncomment the function you want to test\n",
+        "# main()  # For a single check\n",
+        "tall_enough_extension()  # For repeated checks\n"
+      ],
+      "metadata": {
+        "id": "7rl1AbZKMsCR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "05"
+      ],
+      "metadata": {
+        "id": "-eGankJ-MwGh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def generate_random_numbers():\n",
+        "    for _ in range(10):\n",
+        "        print(random.randint(1, 100), end=\" \")\n",
+        "\n",
+        "# Generate and print 10 random numbers\n",
+        "generate_random_numbers()\n"
+      ],
+      "metadata": {
+        "id": "pZb14zpWMzwm"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
